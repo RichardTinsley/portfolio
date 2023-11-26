@@ -1,3 +1,0 @@
-# portfolio
-
-richard-tinsley.com

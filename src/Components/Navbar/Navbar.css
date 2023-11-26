@@ -1,0 +1,26 @@
+header{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    height: 10vh;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding-right: 10em;
+}
+
+.logo{
+    padding-left: 10em ;
+}
+
+.links a{
+    color: var(--dark-orange);
+    text-decoration: none;
+}
+
+.links a:hover{
+    text-decoration: none;
+}

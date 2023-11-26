@@ -1,0 +1,17 @@
+:root {
+    --dark-grey: #141414;
+    --dark-orange: #ff652f;
+    --light-grey: #9c9c9c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-grey);
+    color: var(--light-grey);
+}
+
+h3 {
+    color: var(--dark-orange);
+}
