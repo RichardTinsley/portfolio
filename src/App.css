@@ -1,5 +1,6 @@
 :root {
-    --dark-grey: #141414;
+    /* --dark-grey: #141414; */
+    --dark-grey: #0C0C0C;
     --dark-orange: #ff652f;
     --light-grey: #9c9c9c;
 }
@@ -8,10 +9,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: var(--dark-grey);
     color: var(--light-grey);
 }
 
 h3 {
-    color: var(--dark-orange);
+    color: var(--light-grey);
+    font-size: 1.2rem;
 }

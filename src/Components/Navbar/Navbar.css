@@ -1,8 +1,11 @@
-header{ 
+header{
+
     display: flex;
     align-items: center;
-    justify-content: space-between;  
+    justify-content: space-between;
+    width: 100vw;  
     height: 10vh;
+    background-color: var(--dark-grey);
 }
 
 header ul{

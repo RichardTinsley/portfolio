@@ -3,16 +3,16 @@ import "./Body.css"
 export default function Body() {
 
     return (
-    <>
+    <div className="body">
         <h3>
-        Hello, my name is Richard Tinsley & I am a Software and Web Developer with over 10 years of experience.
+        Hello, my name is Richard Tinsley, I am a Software / Web Developer with over 10 years of experience.
         </h3>
 
         <h3>
         Qualifications:
         </h3>
         <ul>
-            <li>2020 - 2024: Bachelor of Information Technology - Majoring in Computer Science</li>
+            <li>2020 - 2024: Bachelor of Information Technology - Majoring in Computer Science - GPA 6.2</li>
             <li>2018 - 2019: Certificate III in Business Administration - BSB30415_20170101</li>
             <li>2016 - 2018: Diploma in Information Technology - Systems Administration</li>
             <li>2017: Certificate II in Business - ESA2-BSB20115</li>
@@ -64,7 +64,7 @@ export default function Body() {
             <li>UI & UX Design</li>
             <li>Agile Project Management</li>
         </ul>
-    </>
+    </div>
     )
 }
 
