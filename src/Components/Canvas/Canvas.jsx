@@ -1,12 +1,23 @@
 import { useRef, useEffect } from "react";
-import Unit from "./Unit";
+import Particle from "./Particle";
 import "./Canvas.css"
 
 export default function Canvas() {
 
     const canvasRef = useRef();
-    let unitCount = 10;
-    let unitTimer = 200;
+
+    let options = {
+		particleColor: "rgba(255,255,255)",
+		lineColor: "rgba(0,181,255)",
+		particleAmount: 30,
+		defaultRadius: 1,
+		variantRadius: 1,
+		defaultSpeed: .1,
+		variantSpeed: .1,
+		linkRadius: 200
+	};
+
+    let rgb = options.lineColor.match(/\d+/g);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -15,35 +26,42 @@ export default function Canvas() {
         let h = canvas.height = window.innerHeight;
         
         let animationID;
-        let units = [];
+
+        const particles = [];
+        for (let i = 0; i < options.particleAmount; i++)
+            particles.push(new Particle(options, w, h));
         
 
-        for (let i = 0; i < unitCount; i++){
-            setTimeout(() => {
-                units.push(new Unit(w, h));
-            
-            }, i * unitTimer);
-        }
-
         const renderer = () => {
-            // context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-            context.fillStyle = "rgba(0, 0, 0, .05)";
-            context.fillRect(0,0,w,h);
+            context.clearRect(0,0,w,h);
 
-            for (let i = 0; i < units.length; i++){
-                units[i].update();
-                units[i].draw(context);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw(context);
+            }
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = 0; j < particles.length; j++) {
+                    let distance = Math.sqrt(Math.pow(particles[j].x - particles[i].x, 2) + Math.pow(particles[j].y - particles[i].y, 2));
+                    let opacity = 1 - distance / options.linkRadius;
+                    if (opacity > 0) {
+                        context.lineWidth = 0.5;
+                        context.strokeStyle = 'rgba('+rgb[0]+','+rgb[1]+','+rgb[2]+','+opacity+')';
+                        context.beginPath();
+                        context.moveTo(particles[i].x, particles[i].y);
+                        context.lineTo(particles[j].x, particles[j].y);
+                        context.closePath();
+                        context.stroke();
+                    }
+                }
             }
 
             animationID = window.requestAnimationFrame(renderer);
         }
         renderer();
         
-
         const resizeReset = () => {
             w = canvas.width = window.innerWidth;
             h = canvas.height = window.innerHeight;
-            console.log(w, h);
         }
         resizeReset();
         window.addEventListener("resize", resizeReset);
@@ -51,6 +69,5 @@ export default function Canvas() {
         return () => window.cancelAnimationFrame(animationID);
     }, []);
 
-
-    return <canvas id="canvas" ref={canvasRef} />;
+    return <canvas ref={canvasRef} />;
 }

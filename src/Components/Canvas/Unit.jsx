@@ -5,7 +5,6 @@ export default class Unit {
         this.reset();
         this.constructed = true;
     }
-
     reset(){
         this.x = Math.round(this.w / 2);
         this.y = Math.round(this.h / 2);
@@ -51,13 +50,10 @@ export default class Unit {
         if (this.time >= this.ttl || this.x < 0 || this.x > this.w || this.y < 0 || this.y > this.h) {
 			this.reset();
 		}
-
 		this.time++;
 	
     }
-
     getRandomInt(min, max){
         return Math.round(Math.random() * (max - min)) + min;
     }
-
 }
