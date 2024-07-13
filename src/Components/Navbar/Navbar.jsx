@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <header>
       <div className="logo">
-        RT-Logo
+        Richard-Tinsley.com
       </div>
 
       <nav>

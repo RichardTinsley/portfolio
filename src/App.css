@@ -1,18 +1,28 @@
 :root {
     /* --dark-grey: #141414; */
-    --dark-grey: #0C0C0C;
     --dark-orange: #ff652f;
+    --dark-grey: #0c0c0c99;
     --light-grey: #9c9c9c;
+    --dark-blue: #00b5ff55;
+    --light-blue: #00b5ff;
+}
+@font-face {
+    font-family: anonymous;
+    src: url(../assets/Anonymous\ Pro.ttf);
 }
 
 * {
+    font-family: anonymous;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: var(--light-grey);
+
 }
 
-h3 {
-    color: var(--light-grey);
-    font-size: 1.2rem;
+body {
+    background-image: url("./../assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-color: #000000;
 }

@@ -1,11 +1,12 @@
 header{
-
+    /* background-color: var(--dark-grey); */
+    color: var(--light-grey);
+    backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100vw;  
-    height: 10vh;
-    background-color: var(--dark-grey);
+    height: 8vh;
 }
 
 header ul{
@@ -16,11 +17,12 @@ header ul{
 }
 
 .logo{
-    padding-left: 10em ;
+    font-size: 1.5em;
+    padding-left: 10rem ;
 }
 
 .links a{
-    color: var(--dark-orange);
+    color: var(--light-blue);
     text-decoration: none;
 }
 

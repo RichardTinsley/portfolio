@@ -8,11 +8,12 @@ export default function Canvas() {
 
     let options = {
 		particleColor: "rgba(255,255,255)",
-		lineColor: "rgba(0,181,255)",
+		lineColor: "rgba(0,181,255)", // LIGHT BLUE
+        // lineColor: "rgba(255,101,47)",  //DARK ORANGE
 		particleAmount: 30,
 		defaultRadius: 1,
 		variantRadius: 1,
-		defaultSpeed: .1,
+		defaultSpeed: .05,
 		variantSpeed: .1,
 		linkRadius: 200
 	};
