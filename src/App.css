@@ -3,7 +3,7 @@
     --dark-orange: #ff652f;
     --dark-grey: #0c0c0c99;
     --light-grey: #9c9c9c;
-    --dark-blue: #00b5ff55;
+    --dark-blue: #00b5ff77;
     --light-blue: #00b5ff;
 }
 @font-face {
@@ -12,10 +12,10 @@
 }
 
 * {
-    font-family: anonymous;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: anonymous;
 
 }
 

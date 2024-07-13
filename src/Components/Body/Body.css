@@ -2,48 +2,37 @@
     color: var(--light-grey);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-    gap: 10rem;
-    padding-top: 10rem;
-    padding-bottom: 5rem;
-    /* flex-wrap: wrap; */
 }
 
 .card {
     display: flex;
-    width: 70vw;
-    border-color: var(--dark-blue);
-    border-width: 1px;
-    border-style: solid;
+    width: 70%;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,.2);
+    margin: 5rem 0rem 5rem 0rem;
     
 }
 
 .card-title {
     background-color: var(--dark-blue);
     backdrop-filter: blur(5px);
-    width: 25%;
+    width: 15%;
 
-    padding: 1em;
-    padding-top: .5em;
+    padding: 1rem;
 
     text-align: center;
     font-size: 1.2rem;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
 }
 
 .card-body {
     background-color: var(--dark-grey);
     backdrop-filter: blur(5px);
-    width: 75%;
-
-    padding: 1em;
-    padding-top: .5em;
+    width: 85%;
+    padding: 1rem 0rem 1rem 2rem; 
 }
 
 ul {
-    padding-top: .5em;
     list-style: none;
-    padding-left: 2em;
 }

@@ -1,12 +1,14 @@
 header{
-    /* background-color: var(--dark-grey); */
+    background-color: var(--dark-blue);
     color: var(--light-grey);
     backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100vw;  
-    height: 8vh;
+    height: 6vh;
+
+    margin-bottom: 5rem;
 }
 
 header ul{
@@ -17,7 +19,7 @@ header ul{
 }
 
 .logo{
-    font-size: 1.5em;
+    font-size: 1.8rem;
     padding-left: 10rem ;
 }
 

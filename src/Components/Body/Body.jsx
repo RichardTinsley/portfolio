@@ -4,9 +4,10 @@ export default function Body() {
 
     return (
     <div className="body">
-        {/* <h3>
-        Hello, my name is Richard Tinsley, I am a Software / Web Developer with over 10 years of experience.
-        </h3> */}
+
+        <div className="hero">
+            Richard Tinsley: Queensland based Software / Web Developer with over 10 years of experience.
+        </div>
 
         <div className="card">
             <div className="card-title"> Software Development </div>
@@ -24,16 +25,17 @@ export default function Body() {
         </div>
         
         <div className="card">
-            <div className="card-title"> Web Development </div>
             <div className="card-body">
                 <ul>
                     <li>HTML</li>
                     <li>CSS & SASS</li>
+                    <li>Tailwind & Bootstrap</li>
                     <li>Javascript & Typescript</li>
                     <li>React & Vue</li>
                     <li>Express & Flask</li>
                 </ul>
             </div>
+            <div className="card-title"> Web Development </div>
         </div>
 
         <div className="card">
@@ -51,17 +53,6 @@ export default function Body() {
         </div>
 
         <div className="card">
-            <div className="card-title"> Database Management </div>
-            <div className="card-body">
-                <ul>
-                    <li>PostGres</li>
-                    <li>MySQL</li>
-                    <li>MariaDB & MongoDB</li>
-                </ul>
-            </div>
-        </div>
-
-        <div className="card">
             <div className="card-title"> Other Skills </div>
             <div className="card-body">
                 <ul>
@@ -69,6 +60,8 @@ export default function Body() {
                     <li>Blender</li>
                     <li>Unreal & Unity</li>
                     <li>GIT & CICD Pipelines</li>
+                    <li>MySQL & PostgreSQL</li>
+                    <li>MariaDB & MongoDB</li>
                     <li>Docker & Kubernetes</li>
                     <li>UI & UX Design Principles</li>
                     <li>Agile Project Management</li>
