@@ -32,7 +32,6 @@ export default function Projects() {
         for (let i = 0; i < options.particleAmount; i++)
             particles.push(new Particle(options, w, h));
         
-
         const renderer = () => {
             context.clearRect(0,0,w,h);
 
@@ -45,7 +44,7 @@ export default function Projects() {
                     let distance = Math.sqrt(Math.pow(particles[j].x - particles[i].x, 2) + Math.pow(particles[j].y - particles[i].y, 2));
                     let opacity = 1 - distance / options.linkRadius;
                     if (opacity > 0) {
-                        context.lineWidth = 0.5;
+                        context.lineWidth = 1;
                         context.strokeStyle = 'rgba('+rgb[0]+','+rgb[1]+','+rgb[2]+','+opacity+')';
                         context.beginPath();
                         context.moveTo(particles[i].x, particles[i].y);
@@ -55,18 +54,10 @@ export default function Projects() {
                     }
                 }
             }
-
             animationID = window.requestAnimationFrame(renderer);
         }
         renderer();
-        
-        const resizeReset = () => {
-            w = canvas.width = window.innerWidth;
-            h = canvas.height = window.innerHeight;
-        }
-        resizeReset();
-        window.addEventListener("resize", resizeReset);
-        
+
         return () => window.cancelAnimationFrame(animationID);
     }, []);
 
