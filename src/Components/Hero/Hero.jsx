@@ -1,14 +1,15 @@
 import "./Hero.css"
 
 export default function Hero() {
-
     return (
         <div id="hero">
             <div id="hero-card">
                 <div id="hero-text">
-                    <h1 className="large-text">Software Engineer <br /> and Web Developer </h1>
-                    <h1 className="medium-text">With over 10 years experience.</h1>  
-                    <button id="contact"> Contact Me </button>      
+                    <div className="large-text">Software Engineer <br /> and Web Developer </div>
+                    <div className="medium-text">With over 10 years of experience</div>  
+                    <a href="#projects">
+                        <button id="contact"> Projects </button>      
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,13 @@
+#projects {
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas {
+    position: absolute;
+    z-index: -1;
+    width: 95%;
+}

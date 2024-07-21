@@ -19,3 +19,19 @@ header ul{
     color: var(--light-grey);
     text-decoration: none;
 }
+
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icons{
+    width: 1.5rem;
+    cursor: pointer;
+    fill: var(--light-grey)
+}
+
+.icons:hover{
+    opacity: 50%;
+}

@@ -1,11 +1,10 @@
 #hero {
     display: flex;
-    height: 80vh;
+    height: 94vh;
     background-image: url("../../assets/bg1.jpg");
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
-
     align-items: center;
 }
 
@@ -18,6 +17,7 @@
 
 #hero-card {
     position: relative;
+    right: -5%;
     background-color: #00000000;
 }
 @property --gradient-angle{
@@ -38,37 +38,23 @@
     inset: -.5rem;
     background: conic-gradient(
         from var(--gradient-angle),
-        #2A67AF, 
-        #7F0225,
-        #003C70, 
-        #f26100
+        #2A67AFCC, 
+        #7F0225CC,
+        #003C70CC, 
+        #F26100CC
     );
     filter: blur(3.5rem);
-    animation: rotation 80s linear infinite;
-}
-
-.large-text{
-    background-color: #00000000;
-    text-shadow: 3px 3px 5px #000000;
-    font-size: 2rem;
-    font-family: 'inter-bold';
-    line-height: 150%;
-}
-
-.medium-text{
-    background-color: #00000000;
-    text-shadow: 3px 3px 5px #000000;
-    padding-top: 1rem;
-    font-size: 1.25rem;
-    line-height: 150%;
+    animation: rotation 60s linear infinite;
 }
 
 #contact {
     margin-top: 2rem;
+    border-radius: .2rem;
     border: none;
     padding: .5rem;
     background-color: #AC0000;
     width: 8rem;
     font-size: 1rem;
     box-shadow: 3px 3px 5px #000000;
+    cursor: pointer;
 }

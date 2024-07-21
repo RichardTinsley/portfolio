@@ -20,13 +20,42 @@
     margin: 0;
     padding: 0;
 
+    scroll-behavior: smooth;
     color: var(--light-grey);
     font-family: 'inter';
+}
+
+body {
     background-color: #010101;
 }
 
 #main-container{
-    width: 64vw;
+    width: 64%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.large-text{
+    text-shadow: 3px 3px 5px #000000;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+    font-family: 'inter-bold';
+    line-height: 150%;
+}
+
+.medium-text{
+    text-shadow: 3px 3px 5px #000000;
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+@media (max-width: 600px){
+    #main-container{
+        width: 100%;
+    }
+
+    .large-text{
+        font-size: 2rem;
+    }
 }

@@ -1,8 +1,8 @@
 import { useRef, useEffect } from "react";
 import Particle from "./Particle";
-import "./Canvas.css"
+import "./Projects.css"
 
-export default function Canvas() {
+export default function Projects() {
 
     const canvasRef = useRef();
 
@@ -70,5 +70,10 @@ export default function Canvas() {
         return () => window.cancelAnimationFrame(animationID);
     }, []);
 
-    return <canvas ref={canvasRef} />;
+    return (
+        <div id="projects">
+            <div className="medium-text">Coming Soon</div>
+            <canvas ref={canvasRef} />
+        </div>
+    );
 }
