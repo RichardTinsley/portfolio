@@ -11,9 +11,15 @@
 
 #hero-text{
     position: relative;
+    z-index: 1;
+    background-color: #00000000;
     /* background-image: conic-gradient(#2A67AF, #003C70, #7F0225); */
 }
 
+#hero-card {
+    position: relative;
+    background-color: #00000000;
+}
 @property --gradient-angle{
     syntax: "<angle>";
     initial-value: 0deg;
@@ -25,33 +31,33 @@
     100% { --gradient-angle: 360deg; }
 }
 
-#hero-text::before,
-#hero-text::after {
+#hero-card::before,
+#hero-card::after {
     content: "";
     position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        var(--gradient-angle),
+    inset: -.5rem;
+    background: conic-gradient(
+        from var(--gradient-angle),
         #2A67AF, 
-        #003C70, 
         #7F0225,
+        #003C70, 
         #f26100
     );
     filter: blur(3.5rem);
-    animation: rotation 20s linear infinite;
+    animation: rotation 80s linear infinite;
 }
 
 .large-text{
-    text-shadow: 3px 3px 5px #000000;
     background-color: #00000000;
+    text-shadow: 3px 3px 5px #000000;
     font-size: 2rem;
     font-family: 'inter-bold';
     line-height: 150%;
 }
 
 .medium-text{
-    text-shadow: 3px 3px 5px #000000;
     background-color: #00000000;
+    text-shadow: 3px 3px 5px #000000;
     padding-top: 1rem;
     font-size: 1.25rem;
     line-height: 150%;
@@ -64,4 +70,5 @@
     background-color: #AC0000;
     width: 8rem;
     font-size: 1rem;
+    box-shadow: 3px 3px 5px #000000;
 }
