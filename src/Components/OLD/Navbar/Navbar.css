@@ -15,7 +15,7 @@ header ul{
     display: flex;
     list-style: none;
     gap: 2rem;
-    padding-right: 10em;
+    padding-right: 10rem;
 }
 
 .logo{

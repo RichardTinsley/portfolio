@@ -42,6 +42,7 @@ export default function Body() {
             <div className="card-title"> Qualifications </div>
             <div className="card-body">
                 <ul>
+		    <li>2024 - QUT Executive Deans' Commendation for Academic Excellence</li>
                     <li>2020 - 2024: Bachelor of Information Technology - Majoring in Computer Science - GPA 6.2</li>
                     <li>2018 - 2019: Certificate III in Business Administration - BSB30415_20170101</li>
                     <li>2016 - 2018: Diploma in Information Technology - Systems Administration</li>

@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    height: 6vh; 
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.logo{
+    font-size: 1.2rem;
+}
+
+.links a{
+    color: var(--light-grey);
+    text-decoration: none;
+}

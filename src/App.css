@@ -1,28 +1,32 @@
 :root {
-    /* --dark-grey: #141414; */
-    --dark-orange: #ff652f;
-    --dark-grey: #0c0c0c99;
-    --light-grey: #9c9c9c;
+    /* --dark-grey: #060606;
+    --dark-grey-transparent: rgba(6,6,6,0.8);
     --dark-blue: #00b5ff77;
-    --light-blue: #00b5ff;
+    --light-blue: #00b5ff; */
+    --light-grey: rgb(250, 250, 250);
 }
 @font-face {
-    font-family: anonymous;
-    src: url(../assets/Anonymous\ Pro.ttf);
+    font-family: 'inter';
+    src: url(./assets/fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'inter-bold';
+    src: url(./assets/fonts/Inter-Bold.ttf);
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: anonymous;
 
+    color: var(--light-grey);
+    font-family: 'inter';
+    background-color: #010101;
 }
 
-body {
-    background-image: url("./../assets/bg.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    background-color: #000000;
+#main-container{
+    width: 64vw;
+    margin-left: auto;
+    margin-right: auto;
 }

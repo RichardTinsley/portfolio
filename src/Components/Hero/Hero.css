@@ -1,0 +1,67 @@
+#hero {
+    display: flex;
+    height: 80vh;
+    background-image: url("../../assets/bg1.jpg");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    align-items: center;
+}
+
+#hero-text{
+    position: relative;
+    /* background-image: conic-gradient(#2A67AF, #003C70, #7F0225); */
+}
+
+@property --gradient-angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+}
+
+#hero-text::before,
+#hero-text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        var(--gradient-angle),
+        #2A67AF, 
+        #003C70, 
+        #7F0225,
+        #f26100
+    );
+    filter: blur(3.5rem);
+    animation: rotation 20s linear infinite;
+}
+
+.large-text{
+    text-shadow: 3px 3px 5px #000000;
+    background-color: #00000000;
+    font-size: 2rem;
+    font-family: 'inter-bold';
+    line-height: 150%;
+}
+
+.medium-text{
+    text-shadow: 3px 3px 5px #000000;
+    background-color: #00000000;
+    padding-top: 1rem;
+    font-size: 1.25rem;
+    line-height: 150%;
+}
+
+#contact {
+    margin-top: 2rem;
+    border: none;
+    padding: .5rem;
+    background-color: #AC0000;
+    width: 8rem;
+    font-size: 1rem;
+}
